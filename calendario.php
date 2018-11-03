@@ -148,7 +148,7 @@ function renderMes($mes) {
     $posicaoPrimeiroDiaDoMes = date(
         "w",
         $datasMes->modify("first day of this month")->getTimestamp()
-    );
+    ) + 1;
 
     $posicaoUltimoDiaDoMes = date(
         "w",
@@ -159,18 +159,22 @@ function renderMes($mes) {
         $mes . "/" . ANO_CALENDARIO ==
         date(
             "m/Y",
-            $datasMes->modify("now")->getTimestamp()
+            strtotime("now")
         )
     );
 
-    for ($diaNumero = 1; $diaNumero <= 35; $diaNumero++) {
+    $diaNumeroOficial = 1;
+    for ($diaNumero = 1; $diaNumero <= 42; $diaNumero++) {
 
         // Preenche os espaços vazios da semana com zeros
-        $diaEmBranco = $diaNumero > $qtdDiasNoMes || 
+        $diaEmBranco = $diaNumeroOficial > $qtdDiasNoMes || 
                         $diaNumero < $posicaoPrimeiroDiaDoMes;
         
         if (!$diaEmBranco) {
-            array_push($semana, $diaNumero);
+            
+            array_push($semana, $diaNumeroOficial);
+            $diaNumeroOficial++;
+            
         } else {
             array_push($semana, 0);
         }
