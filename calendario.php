@@ -1,5 +1,22 @@
 <?php
 
+function boas_vindas() {
+    $hora_atual = date(
+        "H",
+        strtotime("now")
+    );
+
+    if ($hora_atual >= 1 && $hora_atual < 6) {
+        echo "Boa madrugada";
+    } else if ($hora_atual >= 6 && $hora_atual < 12) {
+        echo "Bom dia";
+    } elseif ($hora_atual >= 12 && $hora_atual < 19) {
+        echo "Boa tarde";
+    } else if ($hora_atual >= 19 && $hora_atual <= 23) {
+        echo "Boa noite";
+    }
+}
+
 /**
  * Desenha uma linha no calendário
  *
@@ -21,7 +38,7 @@ function linha($semana) {
 }
 
 
-function calendario() {
+function mes() {
     $dia = 1;
     $semana = array();
 
@@ -54,9 +71,11 @@ function calendario() {
 
 </head>
 <body>
-    <div class="container mx-auto mt-5">
+    <div class="container mx-auto mt-3">
+    <h1 class="text-center"><?php boas_vindas(); ?>!</h1>
+    <br>
     <div class="row">
-    <div class="col-md-6 col-lg-4">
+    <div class="col-md-6 col-lg-4 mb-3">
         <div class="card">
             <div class="card-header text-center font-weight-bold">
                 Março
@@ -115,37 +134,124 @@ function calendario() {
             </div>
         </div>
     </div>
-    <div class="col-md-6 col-lg-4">
+    <div class="col-md-6 col-lg-4 mb-3">
         <div class="card">
-            <div class="card-body">
-                <h5 class="card-title">Special title treatment</h5>
-                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
+            <div class="card-header text-center font-weight-bold">
+                Março
+            </div>
+            <div class="card-body px-0">
+                <div class="mx-auto">
+                    <div class="d-flex row justify-content-around px-4 font-weight-bold flex-nowrap">
+                        <div>Seg</div>
+                        <div>Ter</div>
+                        <div>Qua</div>
+                        <div>Qui</div>
+                        <div>Sex</div>
+                        <div>Sáb</div>
+                        <div>Dom</div>
+                    </div>
+                    <hr>
+                    <div class="month-days">
+                        <div class="d-flex row justify-content-around px-4 week flex-nowrap">
+                            <div class="day px-3 rounded bg-info p-2">8</div>
+                            <div class="day px-3 p-2">8</div>
+                            <div class="day px-3 p-2">8</div>
+                            <div class="day px-3 p-2">8</div>
+                            <div class="day px-3 p-2">8</div>
+                            <div class="day px-3 p-2">8</div>
+                            <div class="day px-3 p-2">8</div>
+                        </div>
+                        <div class="d-flex row justify-content-around px-4 week flex-nowrap">
+                            <div class="day px-3 rounded bg-info p-2">8</div>
+                            <div class="day px-3 p-2">8</div>
+                            <div class="day px-3 p-2">8</div>
+                            <div class="day px-3 p-2">8</div>
+                            <div class="day px-3 p-2">8</div>
+                            <div class="day px-3 p-2">8</div>
+                            <div class="day px-3 p-2">8</div>
+                        </div>
+                        <div class="d-flex row justify-content-around px-4 week flex-nowrap">
+                            <div class="day px-3 rounded bg-info p-2">8</div>
+                            <div class="day px-3 p-2">8</div>
+                            <div class="day px-3 p-2">8</div>
+                            <div class="day px-3 p-2">8</div>
+                            <div class="day px-3 p-2">8</div>
+                            <div class="day px-3 p-2">8</div>
+                            <div class="day px-3 p-2">8</div>
+                        </div>
+                        <div class="d-flex row justify-content-around px-4 week flex-nowrap">
+                            <div class="day px-3 rounded bg-info p-2">8</div>
+                            <div class="day px-3 p-2">8</div>
+                            <div class="day px-3 p-2">8</div>
+                            <div class="day px-3 p-2">8</div>
+                            <div class="day px-3 p-2">8</div>
+                            <div class="day px-3 p-2">8</div>
+                            <div class="day px-3 p-2">8</div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-    <div class="col-md-6 col-lg-4">
+    <div class="col-md-6 col-lg-4 mb-3">
         <div class="card">
-            <div class="card-body">
-                <h5 class="card-title">Special title treatment</h5>
-                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
+            <div class="card-header text-center font-weight-bold">
+                Março
+            </div>
+            <div class="card-body px-0">
+                <div class="mx-auto">
+                    <div class="d-flex row justify-content-around px-4 font-weight-bold flex-nowrap">
+                        <div>Seg</div>
+                        <div>Ter</div>
+                        <div>Qua</div>
+                        <div>Qui</div>
+                        <div>Sex</div>
+                        <div>Sáb</div>
+                        <div>Dom</div>
+                    </div>
+                    <hr>
+                    <div class="month-days">
+                        <div class="d-flex row justify-content-around px-4 week flex-nowrap">
+                            <div class="day px-3 rounded bg-info p-2">8</div>
+                            <div class="day px-3 p-2">8</div>
+                            <div class="day px-3 p-2">8</div>
+                            <div class="day px-3 p-2">8</div>
+                            <div class="day px-3 p-2">8</div>
+                            <div class="day px-3 p-2">8</div>
+                            <div class="day px-3 p-2">8</div>
+                        </div>
+                        <div class="d-flex row justify-content-around px-4 week flex-nowrap">
+                            <div class="day px-3 rounded bg-info p-2">8</div>
+                            <div class="day px-3 p-2">8</div>
+                            <div class="day px-3 p-2">8</div>
+                            <div class="day px-3 p-2">8</div>
+                            <div class="day px-3 p-2">8</div>
+                            <div class="day px-3 p-2">8</div>
+                            <div class="day px-3 p-2">8</div>
+                        </div>
+                        <div class="d-flex row justify-content-around px-4 week flex-nowrap">
+                            <div class="day px-3 rounded bg-info p-2">8</div>
+                            <div class="day px-3 p-2">8</div>
+                            <div class="day px-3 p-2">8</div>
+                            <div class="day px-3 p-2">8</div>
+                            <div class="day px-3 p-2">8</div>
+                            <div class="day px-3 p-2">8</div>
+                            <div class="day px-3 p-2">8</div>
+                        </div>
+                        <div class="d-flex row justify-content-around px-4 week flex-nowrap">
+                            <div class="day px-3 rounded bg-info p-2">8</div>
+                            <div class="day px-3 p-2">8</div>
+                            <div class="day px-3 p-2">8</div>
+                            <div class="day px-3 p-2">8</div>
+                            <div class="day px-3 p-2">8</div>
+                            <div class="day px-3 p-2">8</div>
+                            <div class="day px-3 p-2">8</div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-    <!-- <table border=1>
-        <tr>
-            <th>Dom</th>
-            <th>Seg</th>
-            <th>Ter</th>
-            <th>Qua</th>
-            <th>Qui</th>
-            <th>Sex</th>
-            <th>Sáb</th>
-        </tr>
-        <?php // calendario(); ?>
-
-    </table> -->
 </body>
 </html>
 
