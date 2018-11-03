@@ -5,5 +5,5 @@ Um calendário utilizando o PHP e bootstrap 4
 - Responsivo
 - Bootstrap 4
 
-[image](screenshor.png)
+[image](screenshot.png)
 
