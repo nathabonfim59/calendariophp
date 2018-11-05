@@ -12,7 +12,7 @@ Um calendário utilizando o PHP e bootstrap 4
 - PHP
 - HTML5
 
-# [Demo](http://projetos.nathabonfim59.com/calendariophp)
+# [Demo](http://demos.nathabonfim59.com/calendariophp/)
 
 ![Screenshot](preview.png)
 
